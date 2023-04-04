@@ -304,8 +304,13 @@
 <div class="todo-list">
   <h1>TODO LIST</h1>
   <div class="add-new">
-    <input class="add-input" type="text" (keyup) = "onKey($event)">
-    <button class="add" (click) = "addNew(values)">ADD NEW</button>
+    <input 
+      class="add-input" 
+      value={{values}} 
+      type="text" 
+      (keyup) = "onKey($event)"
+      placeholder="Enter your task">
+    <button class="add" (click) = "addNew()">ADD NEW</button>
   </div>
   <ul>
       <app-todo-list-item

@@ -13,6 +13,12 @@ export class TodosService {
     return this.http.get<IItem[]>(BASE_URL);
 	}
 	postNew(todo: IItem) {
-		return this.http.post(BASE_URL, todo);
+		return this.http.post<IItem[]>(BASE_URL, todo);
+	}
+	deleteItem(id: string) {
+		return this.http.delete(BASE_URL + '/' + id);
+	}
+	updateItem(newItem: IItem) {
+		return this.http.put(BASE_URL+ '/' + newItem.id, newItem);
 	}
 }

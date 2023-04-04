@@ -20,6 +20,7 @@ color: rgb(64, 64, 120);
 }
 
 .add-input {
+	border: 1px solid rgb(190, 139, 238);
 	width: 70%;
 	height: 20px;
 }

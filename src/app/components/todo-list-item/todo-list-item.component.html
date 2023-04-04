@@ -1,7 +1,17 @@
-<li class="item">
-	<h3>{{item.title | uppercase}}</h3>
-	<button>EDIT</button>
-	<button>DELETE</button>
+<li 
+	class="item" 
+	[style.background]="item.completed ? 'lightgreen' : 'yellow'">
+	<h3 
+		*ngIf="!isEdit" 
+		(click)="setCompleted()">{{item.title | uppercase}}
+	</h3>
+	<input 
+		*ngIf="isEdit" 
+		(keyup) = "onKey($event)" 
+		type="text" maxlength="100" 
+		value={{value}}>
+	<button (click)="isEdit ? handleSave() : handleEdit()">{{isEdit ? 'SAVE' : 'EDIT'}}</button>
+	<button (click)="deleteTodo()">DELETE</button>
 </li>
 
 

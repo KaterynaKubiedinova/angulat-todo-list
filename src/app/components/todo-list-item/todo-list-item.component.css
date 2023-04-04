@@ -1,12 +1,23 @@
 .item {
-  width: 100%;
+  width: 90%;
+  min-height: 50px;
+  margin: 10px;
+  padding: 0 5px 0 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 h3 {
+  text-align: center;
   width: 60%;
+  word-wrap: break-word;
+}
+
+input{
+  border: none;
+  height: 20px;
+  width: 59%;
 }
 button {
   width: 15%;
